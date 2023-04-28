@@ -1,0 +1,46 @@
+Starting local Bazel server and connecting to it...
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:http_server (1 packages loaded, 0 targets configured)
+Analyzing: target //:http_server (16 packages loaded, 6 targets configured)
+Analyzing: target //:http_server (16 packages loaded, 6 targets configured)
+Analyzing: target //:http_server (16 packages loaded, 6 targets configured)
+Analyzing: target //:http_server (16 packages loaded, 6 targets configured)
+Analyzing: target //:http_server (16 packages loaded, 6 targets configured)
+Analyzing: target //:http_server (16 packages loaded, 6 targets configured)
+Analyzing: target //:http_server (16 packages loaded, 6 targets configured)
+Analyzing: target //:http_server (16 packages loaded, 6 targets configured)
+Analyzing: target //:http_server (16 packages loaded, 6 targets configured)
+Analyzing: target //:http_server (16 packages loaded, 6 targets configured)
+Analyzing: target //:http_server (16 packages loaded, 6 targets configured)
+Analyzing: target //:http_server (16 packages loaded, 6 targets configured)
+Analyzing: target //:http_server (16 packages loaded, 6 targets configured)
+Analyzing: target //:http_server (16 packages loaded, 6 targets configured)
+Analyzing: target //:http_server (16 packages loaded, 6 targets configured)
+Analyzing: target //:http_server (16 packages loaded, 6 targets configured)
+INFO: Repository perl_linux_amd64 instantiated at:
+  /home/work/workspace/glaucus_reason_engine/WORKSPACE:265:25: in <toplevel>
+  /home/work/.cache/bazel/_bazel_work/4b42a2d91b07a491a79d852c791e1c36/external/rules_perl/perl/deps.bzl:7:18: in perl_register_toolchains
+Repository rule perl_download defined at:
+  /home/work/.cache/bazel/_bazel_work/4b42a2d91b07a491a79d852c791e1c36/external/rules_perl/perl/repo.bzl:36:32: in <toplevel>
+WARNING: Download from https://github.com/skaji/relocatable-perl/releases/download/5.30.1.1/perl-x86_64-linux.tar.xz failed: class java.io.IOException Read timed out
+ERROR: An error occurred during the fetch of repository 'perl_linux_amd64':
+   Traceback (most recent call last):
+	File "/home/work/.cache/bazel/_bazel_work/4b42a2d91b07a491a79d852c791e1c36/external/rules_perl/perl/repo.bzl", line 4, column 29, in _perl_download_impl
+		ctx.download_and_extract(
+Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/skaji/relocatable-perl/releases/download/5.30.1.1/perl-x86_64-linux.tar.xz] to /home/work/.cache/bazel/_bazel_work/4b42a2d91b07a491a79d852c791e1c36/external/perl_linux_amd64/temp2953622366898409853/perl-x86_64-linux.tar.xz: Read timed out
+ERROR: Error fetching repository: Traceback (most recent call last):
+	File "/home/work/.cache/bazel/_bazel_work/4b42a2d91b07a491a79d852c791e1c36/external/rules_perl/perl/repo.bzl", line 4, column 29, in _perl_download_impl
+		ctx.download_and_extract(
+Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/skaji/relocatable-perl/releases/download/5.30.1.1/perl-x86_64-linux.tar.xz] to /home/work/.cache/bazel/_bazel_work/4b42a2d91b07a491a79d852c791e1c36/external/perl_linux_amd64/temp2953622366898409853/perl-x86_64-linux.tar.xz: Read timed out
+INFO: Repository perl_darwin_amd64 instantiated at:
+  /home/work/workspace/glaucus_reason_engine/WORKSPACE:265:25: in <toplevel>
+  /home/work/.cache/bazel/_bazel_work/4b42a2d91b07a491a79d852c791e1c36/external/rules_perl/perl/deps.bzl:18:18: in perl_register_toolchains
+Repository rule perl_download defined at:
+  /home/work/.cache/bazel/_bazel_work/4b42a2d91b07a491a79d852c791e1c36/external/rules_perl/perl/repo.bzl:36:32: in <toplevel>
+ERROR: Analysis of target '//:http_server' failed; build aborted: java.io.IOException: Error downloading [https://github.com/skaji/relocatable-perl/releases/download/5.30.1.1/perl-x86_64-linux.tar.xz] to /home/work/.cache/bazel/_bazel_work/4b42a2d91b07a491a79d852c791e1c36/external/perl_linux_amd64/temp2953622366898409853/perl-x86_64-linux.tar.xz: Read timed out
+INFO: Elapsed time: 90.937s
+INFO: 0 processes.
+FAILED: Build did NOT complete successfully (16 packages loaded, 6 targets configured)
+ERROR: Build failed. Not running target
+FAILED: Build did NOT complete successfully (16 packages loaded, 6 targets configured)
