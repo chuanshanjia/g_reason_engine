@@ -1,5 +1,11 @@
 # 环境安装
 
+## 切换gcc版本
+
+```bash
+scl enable devtoolset-11 bash
+```
+
 ## 安装bazel
 
 ```bash
@@ -16,6 +22,13 @@ yum install epel-release git gcc-c++ make openssl-devel gflags-devel protobuf-de
 运行
 ```bash
 bazel run //:http_server
+```
+
+测试
+```bash
+curl http://127.0.0.1:8010/v1/queue/start
+
+curl -d '{"userno":"b123"}' http://127.0.0.1:8010/v1/queue/stats/123
 ```
 
 #  参考资料
