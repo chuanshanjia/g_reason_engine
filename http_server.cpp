@@ -128,8 +128,8 @@ public:
         cntl->response_attachment().append("queue started");
     }
     void stop(google::protobuf::RpcController* cntl_base,
-              const HttpRequest*,
-              HttpResponse*,
+              const HttpRequest* request,
+              HttpResponse* response,
               google::protobuf::Closure* done) {
         brpc::ClosureGuard done_guard(done);
         brpc::Controller* cntl =
@@ -138,8 +138,8 @@ public:
         LOG(INFO) << "restful-stop";
     }
     void getstats(google::protobuf::RpcController* cntl_base,
-                  const HttpRequest*,
-                  HttpResponse*,
+                  const HttpRequest* request,
+                  HttpResponse* response,
                   google::protobuf::Closure* done) {
         brpc::ClosureGuard done_guard(done);
         brpc::Controller* cntl =
@@ -148,10 +148,14 @@ public:
         if (unresolved_path.empty()) {
             cntl->response_attachment().append("Require a name after /stats");
         } else {
-            cntl->response_attachment().append("Hello world!");
-            cntl->response_attachment().append(unresolved_path);
+            std::string res_txt = std::move(R"({"code": 2000000, "msg": "suc", "requestId":"20230429-1da", "elapseTime": 220, "data":{"id":11}})");
+            // cntl->response_attachment().append("Hello world!");
+            // cntl->response_attachment().append(unresolved_path);
+            cntl->response_attachment().append(res_txt);
         }
-        LOG(INFO) << "restful-getstats";
+        response->set_message("test message");
+        LOG(INFO) << "Received request[userNo" <<  request->userno()
+                    <<"]" ;
     }
 };
 
